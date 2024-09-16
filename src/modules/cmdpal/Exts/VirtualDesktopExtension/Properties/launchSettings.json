@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "VirtualDesktopExtension (Package)": {
+      "commandName": "MsixPackage",
+      "commandLineArgs": "-RegisterProcessAsComServer"
+    },
+    "VirtualDesktopExtension (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
