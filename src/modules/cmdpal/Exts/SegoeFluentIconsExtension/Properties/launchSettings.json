@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SegoeFluentIconsExtension (Package)": {
+      "commandName": "MsixPackage",
+      "commandLineArgs": "-RegisterProcessAsComServer"
+    },
+    "SegoeFluentIconsExtension (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
