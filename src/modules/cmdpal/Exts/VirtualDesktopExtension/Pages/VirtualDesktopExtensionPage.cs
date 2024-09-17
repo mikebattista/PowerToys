@@ -9,6 +9,7 @@ using System.Text;
 using Microsoft.CmdPal.Extensions;
 using Microsoft.CmdPal.Extensions.Helpers;
 using Microsoft.Win32;
+using VirtualDesktopExtension.Commands;
 using VirtualDesktopExtension.Data;
 
 namespace VirtualDesktopExtension;
@@ -28,7 +29,7 @@ internal sealed partial class VirtualDesktopExtensionPage : ListPage
         return [
             new ListSection()
             {
-                Items = virtualDesktops.Select((virtualDesktop) => new ListItem(new NoOpCommand())
+                Items = virtualDesktops.Select((virtualDesktop) => new ListItem(new SwitchToVirtualDesktopCommand(virtualDesktop))
                 {
                     Title = $"Switch to Desktop {virtualDesktop.Number}{((!string.IsNullOrEmpty(virtualDesktop.Name)) ? $" ({virtualDesktop.Name})" : $"{string.Empty}")}",
                 }).ToArray(),
